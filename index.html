@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato Alan Dias</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/script.js" defer></script>
+</head>
+<body>
+
+<div class="container">
+
+  <div class="progress-bar">
+    <div class="progress"></div>
+  </div>
+
+  <!-- 🔥 FORM COM FORMSPREE -->
+  <form id="form" action="https://formspree.io/f/xldlgynn " method="POST">
+
+    <!-- Etapa 1 -->
+    <div class="step active">
+      <h2>Qual é o seu nome?</h2>
+      <input type="text" name="nome" id="nome" placeholder="Digite seu nome" required>
+      <small class="error-msg" id="nomeErro"></small>
+      <button type="button" class="next">Continuar</button>
+    </div>
+
+    <!-- Etapa 2 -->
+    <div class="step">
+      <h2>Seu WhatsApp</h2>
+      <input 
+      type="tel" 
+      name="telefone" 
+      id="telefone" 
+      placeholder="(82) 90000-0000" 
+      required
+    >
+    <small class="error-msg" id="telefoneErro"></small>
+      <button type="button" class="prev">Voltar</button>
+      <button type="button" class="next">Continuar</button>
+    </div>
+
+    <!-- Etapa 3 -->
+    <div class="step">
+      <h2>Escolha uma opção</h2>
+
+      <div class="options">
+        <label>
+          <input type="radio" name="motivo" value="Solicitar orçamento" required>
+          Solicitar orçamento
+        </label>
+
+        <label>
+          <input type="radio" name="motivo" value="Marcar entrevista">
+          Marcar uma entrevista
+        </label>
+
+        <label>
+          <input type="radio" name="motivo" value="Tirar dúvidas">
+          Tirar dúvidas
+        </label>
+
+        <label>
+          <input type="radio" name="motivo" value="Outros">
+          Outros motivos
+        </label>
+      </div>
+      <small class="error-msg" id="motivoErro"></small>
+
+      <button type="button" class="prev">Voltar</button>
+      <button type="button" class="next">Continuar</button>
+    </div>
+
+    <!-- Etapa 4 -->
+    <div class="step">
+      <h2>Descreva o serviço</h2>
+      <textarea name="mensagem" id="servico" placeholder="Opcional"></textarea>
+
+      <button type="button" class="prev">Voltar</button>
+      <button type="submit">Enviar</button>
+    </div>
+
+  </form>
+
+</div>
+
+<!-- ✅ MODAL -->
+<div id="modal" class="modal">
+  <div class="modal-box">
+    
+    <div class="checkmark">
+      <div class="circle"></div>
+      <div class="check"></div>
+    </div>
+
+    <h2>Mensagem enviada!</h2>
+    <p>Entraremos em contato em breve.</p>
+
+    <button id="closeModal">Fechar</button>
+  </div>
+</div>
+
+</body>
+</html>
